@@ -33,7 +33,7 @@ class Pila:
         if(respuesta==R):
             desapilar(self, x)
             
-    if __name__ == "__main__":
+    if __name__ == "___main___":
         print"Menu principal"
         respuesta = raw_input("Desea (A)gregar o (R)etirar?")
         _init_(self)
