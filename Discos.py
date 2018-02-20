@@ -1,40 +1,25 @@
-# -*- coding: utf-8 -*-
-class Pila:
-    """ Representa una pila con operaciones de apilar, desapilar y
-        verificar si está vacía. """
- 
-    def __init__(self):
-        """ Crea una pila vacía. """
-        # La pila vacía se representa con una lista vacía
-        self.items=[]
+pila=[]
 
-    def apilar(self, x):
-        """ Agrega el elemento x a la pila. """
-        # Apilar es agregar al final de la lista.
-        self.items.append(x)
+def apilar(peliculas):
+    pila.append(peliculas)
 
-    def desapilar(self):
-        """ Devuelve el elemento tope y lo elimina de la pila.
-            Si la pila está vacía levanta una excepción. """
-        try:
-            return self.items.pop()
-        except IndexError:
-            raise ValueError("La pila está vacía")
+def desapilar():
+    print("la pelicula " + str(pila.pop()) + " se ha retirado de la pila")
 
-    def es_vacia(self):
-        """ Devuelve True si la lista está vacía, False si no. """
-        return self.items == []
+def consultar():
+    print pila
 
-
-
-    def decision(respuesta, self):
-        if(respuesta==A):
-            apilar(self, x)
-        if(respuesta==R):
-            desapilar(self, x)
-            
-    if __name__ == "___main___":
-        print"Menu principal"
-        respuesta = raw_input("Desea (A)gregar o (R)etirar?")
-        _init_(self)
-            
+while True:
+    print("1. agregar pelicula")
+    print("2. buscar ultima pelicula ingresada")
+    print("3. consultar pila de peliculas")
+    opcion= int(input())
+    if opcion==1:
+        pe=raw_input("nombre de la pelicula\n")
+        apilar(pe)
+    elif opcion==2:
+        desapilar()
+    elif opcion==3:
+        consultar()
+    else:
+        break
