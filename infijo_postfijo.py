@@ -5,6 +5,15 @@ pila=[]
 EP=[]
 tope=-1
 
+def apilar(x,y):
+    pila.append(x,y)
+
+def desapilar():
+    pila.pop()
+
+def consultar():
+    print pila
+
 def llena():
     if(tope==(n-1)):
         print("llena")
@@ -74,12 +83,12 @@ def pripila(pila):
         return prioridadpi
 
 
-eistring=rsw_input("ingrese la operacion sin espacios")
+eistring=raw_input("ingrese la operacion sin espacios")
 EI=list(eistring.upper())
 x=0
 y=0
 for i in range(len (EI)):
-    if (EI[i] in abod or EI[i] in udt):
+    if (EI[i] in alfabeto or EI[i] in digitos):
         EP.append(EI[i])
 
     elif(EI[i]!= ')'):
